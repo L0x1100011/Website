@@ -2,9 +2,9 @@
     --background: #121212;
     --text: #FFFFFF;
     --nav-bar: rgb(30, 30, 30);
-    --button-primary: #1E90FF; /* Blau für Hauptaktionen */
-    --button-hover: #1C7CC7; /* Dunkleres Blau für Hover */
-    --button-secondary: #E0E0E0; /* Hellgrau für sekundäre Buttons */
+    --button-primary: #1E90FF;
+    --button-hover: #1C7CC7;
+    --button-secondary: #E0E0E0; 
 }
 
 html {
@@ -60,6 +60,62 @@ body {
     padding-top: 5em;
 }
 
+.about-me h1 {
+    margin-top: 1em;
+    font-size: 4rem;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+}
+
+.dropdown-button {
+    height: 100%;
+    width: 5em;
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+    color: var(--text);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.dropdown-button:hover {
+    background-color: var(--button-primary);
+}
+
+.socials-dropdown {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    background-color: var(--nav-bar);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.show {
+    display: block;
+}
+
+.socials-dropdown a {
+    display: block;
+    text-align: center;
+}
+
+.socials-dropdown a:hover {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--button-primary);
+    cursor: pointer;
+}
+
 #profile-image {
     width: 980px;
     height: 670px;
@@ -68,10 +124,6 @@ body {
     box-shadow: 0 0 50px 1px black;
 }
 
-.about-me h1 {
-    margin-top: 1em;
-    font-size: 4rem;
-}
 
 blockquote {
     font-size: 1.5rem;
@@ -252,44 +304,28 @@ a {
     cursor: pointer;
 }
 
-/* extra small screens */
-@media (min-width: 475px) {  
-	.container {
-		max-width: 475px;
-	}
-}
+@media (max-width: 576px) { 
 
-/* small screens */
-	@media (min-width: 640px) {
-	.container {
-		max-width: 640px;
-	}
-}
+ }
 
-/* medium screens */
-	@media (min-width: 768px) {  
-	.container {
-		max-width: 768px;
-	}
-}
+@media (max-width: 768px) { 
+    #profile-image {
+        width: 320px;
+        height: 240px;
+    }
+ }
 
-/* large screens */
-	@media (min-width: 1024px) {  
-	.container {
-		max-width: 1024px;
-	}	
-}
+@media (max-width: 992px) { 
 
-/* extra large screens */
-	@media (min-width: 1280px) {  
-	.container {
-		max-width: 1280px;
-	}
-}
+ }
 
-/* 2x extra large screens */
-	@media (min-width: 1536px) {  
-	.container {
-		max-width: 1536px;
-	}
-}
+@media (max-width: 1200px) { 
+    #profile-image {
+        width: 720px;
+        height: 480px;
+    }
+ }
+
+@media (max-width: 1400px) { 
+
+ }
