@@ -11,5 +11,15 @@ const randomColor = () => {
     const red = Math.floor(Math.random() * 256) + 1;
     const green = Math.floor(Math.random() * 256) + 1;
     const blue = Math.floor(Math.random() * 256) + 1;
-    return  `rgb(${red}, ${green}, ${blue})`;
+    const checkBrightness = red + green + blue;
+
+    if (checkBrightness <= 200) {
+        showColorText.style.color = 'white';
+        changeColorBtn.style.color = 'white';
+    } else {
+        showColorText.style.color = 'black';
+        changeColorBtn.style.color = 'black';
+    }
+
+    return `rgb(${red}, ${green}, ${blue})`;
 }

@@ -11,7 +11,25 @@ main {
     align-items: center;
 }
 
-button {
-    border: 2px solid black;
+div {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
 
+button {
+    border: 2px solid;
+    padding: .5em 2em;
+    border-radius: .5em;
+    box-shadow: 0 0 10px 1.5px ;
+    font-size: 1.2rem;
+    color: black;
+    background-color: transparent;
+    cursor: pointer;
+    transition: border-radius .5s;
+}
+
+button:hover {
+    border-radius: 1em;
+    transition: border-radius .5s transparent;
 }
